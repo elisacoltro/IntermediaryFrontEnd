@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento do DOM exemplo 4</title>
+</head>
+<body>
+    <h1>Usando seletores do DOM</h1>
+    <ul>
+        <li>Java</li>
+        <li>Phyton</li>
+        <li>NodeJS</li>
+    </ul>
+
+    <div id = "conteudo" name = "divconteudo" class= "mensagem">
+    </div>
+
+    <div name = "divconteudo" class = "mensagem">
+    </div>
+
+    <div name = "divconteudo" class = "mensagem">
+    </div>
+</body>
+<script>
+    //elementon = document.getElementsByTagName('li') //traz um array
+    elemento0 = document.getElementsByTagName('li')[0] //selecionou o primeiro elemento da minha lista
+    elemento0.style.color = 'blue'
+
+    elemento1 = document.getElementsByTagName('li')[1]
+    elemento1.style.background = "red"
+
+    elemento2 = document.getElementsByTagName('li')[2]
+    elemento2.innerText = "SpringBoot"
+
+    elementoDiv = document.getElementById("conteudo")
+    elementoDiv.innerHTML = "<p> Estou inserindo essa tag dentro da div usando JavaSript</p>"
+
+    elementoDivName = document.getElementsByName("divconteudo")[1] //isso é um array, perceba que "Elements" ta no plural
+    elementoDivName.style.color = "blue"
+    elementoDivName.innerText = "Estou colocando um texto"
+
+    elementoDivClass = document.getElementsByClassName("mensagem")[2] //isso é um array com 3 elementos
+    elementoDivClass.innerHTML = "<p> Estou colocando um texto dentro de uma div usando 'inner.HTML' e a tag <p></p>"
+
+
+</script>
+</html>

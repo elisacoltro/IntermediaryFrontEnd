@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos do DOM exemplo 7</title>
+</head>
+<body>
+    
+    <ul id = "lista">
+        <li>O que fazemos</li>
+    </ul>
+
+    <ul id = "listaTime" class = "listaUL">
+
+    </ul>
+    
+</body>
+<script>
+    var elemento = document.createElement("div");
+    elemento.innerText = "Incluindo texto na div";
+    elemento.style.backgroundColor = "lightgreen";
+    document.body.append(elemento); //estou mandando o "apendice" elemente ser colocado dentro do body do meu documento.
+
+    var lista = document.getElementById("lista");//peguei a lista criada no body pelo seu id
+    var li = document.createElement("li") //criei um elemento li nessa lisa
+    li.textContent = "Quem somos";//nesse elemento criado ta escrito "Quem somos"
+    lista.appendChild(li); //Posicionei esse li como filho dessa lista que eu criei
+
+    times = ["Real Madrid", "Barcelona", "Juventus", "Atletico"];
+   
+    var listaDeTimes = document.querySelector('ul#listaTime'); //to selecionando a ul criada no meu body pelo id dela
+
+    for (var i = 0; i < times.length; i++){ //aqui eu to passando pelos elementos da minha lista
+        var time = times[i];
+        var listItem = document.createElement('li')
+        listItem.innerText = time
+        listItem.style.border = "1px solid blue"
+        listaDeTimes.appendChild(listItem);
+    }
+    
+
+
+</script>
+</html>

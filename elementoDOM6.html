@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos do DOM exemplo 6</title>
+</head>
+<body>
+    <h1>Segue o teu destino</h1>
+    <div class="estilo">"Segue teu destino</div>
+    <div class="estilo">Rega tuas plantas</div>    
+    <div class="estilo">Ama tuas rosas.</div>
+    <div class="estilo">O resto é sombra de árvores alheias."</div>
+    <p class="estilo">Fernando Pessoa</p>
+    <p> Isso é <span class="estilo">um elemento span</span> dentro de um p </p>
+</body>
+<script>
+    const listaEstilo = document.querySelectorAll(".estilo")
+    for(i = 0; i < listaEstilo.length; i++){
+        listaEstilo[i].style.backgroundColor = "blue"
+        listaEstilo[i].style.color = "white"
+        listaEstilo[i].innerText = listaEstilo[i].innerText.toUpperCase()
+    }
+</script>
+</html>

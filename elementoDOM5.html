@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento do DOM exemplo 5</title>
+</head>
+<body>
+    <h1>Usando seletores do DOM</h1>
+    <ul>
+        <li>Barbie</li>
+        <li>Ken</li>
+    </ul>
+
+    <span class = "novo" id="novospan">
+        Ela é a Barbie! e ele é só o Ken
+    </span>
+
+    <div id = "conteudo" name = "divconteudo" class= "mensagem">
+    </div>
+
+    <div id = "conteudo" name = "divconteudo" class= "mensagem">
+    </div>
+
+    <div id = "conteudo" name = "divconteudo" class= "mensagem">
+    </div>
+
+</body>
+<script>
+    elementoSpanClass = document.querySelector("span.novo") //pode ser só (".novo") ou pelo id que aí fica (#novospan)
+    elementoSpanClass.style.color = "pink"
+
+    elementoSeletor = document.querySelectorAll(".mensagem")[2]//to pegando todo mundo que tem a classe mensagem e fazendo um array
+    elementoSeletor.innerHTML = "<p> Barbie é um filme estadunidense dos gêneros comédia e fantasia dirigido por Greta Gerwig, com o roteiro co-escrito com Noah Baumbach. O filme é baseado na franquia de bonecas Barbie, produzida pela empresa multinacional Mattel </p>"
+
+</script>
+</html>
